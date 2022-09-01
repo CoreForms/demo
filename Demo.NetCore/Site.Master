@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Demo.NetCore.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><%: Page.Title %></title>
+</head>
+<body>
+<h1>Core Forms Demo Application</h1>
+<form id="form1" runat="server">
+    <div style="border-left: 3px solid green; padding-left: 20px">
+        <p>
+            You are using the CoreForms version and running ASP.NET under .NET Core
+        </p>
+        <p>
+            The old ASP.NET functionality is just a route entry so you can mix and match with ASP.NET Core features.
+            For example, with a <a href="AspNetCoreRazorPage">ASP.NET Core Razor Page</a>.
+        </p>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</form>
+</body>
+</html>
