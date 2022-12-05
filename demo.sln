@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.NetFramework", "Demo.N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.NetCore", "Demo.NetCore\Demo.NetCore.csproj", "{08089ACA-EA34-4CE3-9341-878BC5E04BC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Telerik", "Demo.Telerik\Demo.Telerik.csproj", "{B32829AA-46F9-488A-838C-BB5646465047}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{08089ACA-EA34-4CE3-9341-878BC5E04BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08089ACA-EA34-4CE3-9341-878BC5E04BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08089ACA-EA34-4CE3-9341-878BC5E04BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32829AA-46F9-488A-838C-BB5646465047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32829AA-46F9-488A-838C-BB5646465047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32829AA-46F9-488A-838C-BB5646465047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32829AA-46F9-488A-838C-BB5646465047}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
