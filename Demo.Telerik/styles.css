@@ -1,0 +1,50 @@
+.background-blackmetrotouch .demo-container.wrapper,
+.background-black .demo-container.wrapper,
+.background-office2010black .demo-container.wrapper {
+  background: #fff url(images/demo_bgn_dark.png) no-repeat;
+                                                    }
+
+.background-blackmetrotouch .demo-container.wrapper .demo-content,
+.background-black .demo-container.wrapper .demo-content,
+.background-office2010black .demo-container.wrapper .demo-content {
+  box-shadow: 0px 0px 0px 8px rgba(80,80,80,0.2);
+                                                                  }
+
+.demo-container.wrapper {
+  background: #fff url(images/demo_bgn.png) no-repeat;
+  width: 517px;
+  height: 517px;
+  padding: 0px;
+  border: none;
+                        }
+
+.demo-content {
+  position: relative;
+  top: 130px;
+  left: 77px;
+  vertical-align: top;
+  width: 300px;
+  height: 240px;
+  border-radius: 1px;
+  box-shadow: 0px 0px 0px 8px rgba(120,132,132,0.2);
+              }
+
+.demo-content > span {
+  vertical-align: text-top !important;
+  margin-bottom: 15px;
+                     }
+
+.submitButton {
+  margin-right: 15px;
+              }
+
+.resultLabel {
+  font-style: italic;
+  font-size: 11px;
+             }
+
+.gridTitle {
+  font: 16px Arial,Helvetica,sans-serif;
+  line-height: 58px;
+  text-align: center;
+           }

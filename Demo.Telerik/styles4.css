@@ -1,0 +1,47 @@
+.demo-container .header {
+  display: block;
+}
+
+.demo-content {
+  background: url(images/bg.gif) repeat-y;
+  padding: 15px 0 35px 30px;
+  color: #333;
+  width: 718px;
+  clear: left;
+}
+
+.main-description {
+  margin: 0;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.price-checker {
+  width: 364px;
+  height: 67px;
+  float: left;
+  margin-top: 20px;
+  padding: 4px 90px;
+  clear: both;
+  color: #258ebf;
+  cursor: pointer;
+  background: url(images/priceChecker.gif) no-repeat;
+}
+
+  .price-checker .header {
+    font-size: 24px;
+  }
+
+  .price-checker .description {
+    font-size: 11px;
+  }
+
+  .price-checker .results {
+    color: #000;
+  }
+
+.treeViewWrapper {
+  width: 200px;
+  float: left;
+  margin-top: 15px;
+}
