@@ -1,0 +1,104 @@
+#example .demo-container {
+  background: url('Images/background_image.png') 0 20px no-repeat;
+  width: 600px;
+  padding: 125px 120px 0 20px;
+  height: 500px;
+                         }
+
+.demo-container .outerMultiPage {
+  height: 387px;
+  width: 593px;
+  margin-left: 15px;
+  margin-top: 30px;
+                                }
+
+.demo-container .innerMultiPage {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: relative;
+  margin-bottom: -3px;
+                                }
+
+.demo-container .qsf-ib {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+                        }
+
+.demo-container ul {
+  margin: 0;
+  padding: 0;
+                   }
+
+.ingredients.qsf-ib {
+  vertical-align: top;
+  position: relative;
+  top: -19px;
+  *top: 0px;
+                    }
+
+.ingredients p {
+  font: Segoe UI;
+  color: #d80033;
+  text-transform: uppercase;
+  font-size: 18px;
+  white-space: normal;
+  width: 230px;
+  margin-top: 13px;
+               }
+
+.ingredients ul {
+  font: Segoe UI;
+  color: #444444;
+  font-size: 13px;
+  list-style-type: none;
+                }
+
+.recipeImage.qsf-ib {
+  vertical-align: top;
+  margin: 0 15px;
+                    }
+
+.demo-container .subtitle {
+  font: Segoe UI;
+  color: #444444;
+  font-size: 13px;
+  text-transform: uppercase;
+                          }
+
+.disclaimer p {
+  font: Segoe UI;
+  color: #888888;
+  font-size: 12px;
+  left: 1px;
+  margin: 0;
+  position: relative;
+  top: -12px;
+  width: 390px;
+  word-wrap: break-word;
+  white-space: normal;
+              }
+
+.demo-container .RadTabStrip.rtsHorizontal .rtsLevel .rtsLink {
+  text-align: center;
+                                                              }
+
+.demo-container .RadTabStrip.rtsVertical .rtsLevel1 .rtsSelected .rtsLink {
+  background-color: #cccccc;
+                                                                          }
+
+.demo-container .RadTabStrip .rtsImg,
+.demo-container .RadTabStripVertical .rtsImg {
+  border: 0 none;
+  margin-left: -2px;
+  margin-top: 7px;
+  vertical-align: middle;
+                                             }
+
+.demo-container .RadRating {
+  margin-bottom: 22px;
+  position: relative;
+  top: 15px;
+  *top: -3px;
+                           }
