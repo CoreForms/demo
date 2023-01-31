@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
 using CoreForms.Web.Infrastructure;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace Demo.NetCore
@@ -15,13 +17,27 @@ namespace Demo.NetCore
       var legacyAspNetInitializationOptions = new LegacyAspNetInitializationOptions("/", Environment.CurrentDirectory);
       LegacyAspNetInitialization.Initialize(legacyAspNetInitializationOptions);
 
-      CreateHostBuilder().Build().Run();
-    }
+      var builder = WebApplication.CreateBuilder();
 
-    public static IHostBuilder CreateHostBuilder()
-    {
-      return Host.CreateDefaultBuilder()
-        .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+      builder.Services.AddRazorPages();
+      builder.Services.AddLegacyAspNet();
+
+      var app = builder.Build();
+
+      if (app.Environment.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+      }
+
+      app.MapLegacyAspNet("{**rest}");
+      app.MapRazorPages();
+      app.MapGet("/", context =>
+      {
+        context.Response.Redirect("Default.aspx");
+        return Task.CompletedTask;
+      });
+
+      app.Run();
     }
   }
 }

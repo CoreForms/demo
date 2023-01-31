@@ -1,6 +1,7 @@
 using System;
 using CoreForms.Web.Infrastructure;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace Demo.Telerik
@@ -9,19 +10,28 @@ namespace Demo.Telerik
   {
     public static void Main (string[] args)
     {
-      LegacyAspNetInitialization.License = "I hereby confirm that I use CoreForms only for trial purposes and have read and accept the CoreForms Trial License.";
+      LegacyAspNetInitialization.License =
+          "I hereby confirm that I use CoreForms only for trial purposes and have read and accept the CoreForms Trial License.";
 
       Console.WriteLine (AppDomain.CurrentDomain.BaseDirectory);
       LegacyAspNetInitialization.Initialize(new LegacyAspNetInitializationOptions("/", Environment.CurrentDirectory));
 
-      CreateHostBuilder (args).Build().Run();
-    }
+      var builder = WebApplication.CreateBuilder();
 
-    public static IHostBuilder CreateHostBuilder (string[] args)
-    {
-      return Host.CreateDefaultBuilder (args)
-          .ConfigureWebHostDefaults (
-              webBuilder => { webBuilder.UseStartup<Startup>(); });
+      builder.Services.AddRazorPages();
+      builder.Services.AddLegacyAspNet();
+
+      var app = builder.Build();
+
+      if (app.Environment.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+      }
+
+      app.MapLegacyAspNet ("{**rest}");
+      app.MapRazorPages();
+
+      app.Run();
     }
   }
 }
