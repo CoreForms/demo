@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="Demo.Telerik.Global, Demo.Telerik" Language="C#" %>
