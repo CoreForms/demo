@@ -1,6 +1,6 @@
 # CoreForms.Web Demonstration
 
-This repo contains a demonstration of an ASP.NET Web Forms project using CoreForms.Web running under .NET 6. CoreForms.Web is licensed using a trial license. You can find the Nuget packages with the license on the re-motion Nuget package feed (https://nuget.re-motion.org/feeds/re-motion-release/).
+This repo contains a demonstration of an ASP.NET Web Forms project using CoreForms.Web running under .NET 6. CoreForms.Web is licensed using a trial license.
 
 The `Demo.NetFramework` projects contains a sample ASP.NET WebForms application written using .NET Framework. It uses the following WebForms features:
 
