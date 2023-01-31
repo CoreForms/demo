@@ -1,0 +1,23 @@
+@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@attribute [RequireObjectSession(ReadOnly = true)]
+@using CoreForms.Web.Infrastructure.Integration
+@using CoreForms.Web.Infrastructure.Session
+@model Demo.ObjectSession.Pages.ObjectSessionModelReadOnly
+@{
+}
+
+<h1>Object session ASP.NET Core test page (read-only)</h1>
+<p>Id: @Model.Id</p>
+<p>New session: @(Model.IsNewSession ? "yes" : "no")</p>
+<p>Read only: @(Model.IsReadOnly ? "yes" : "no")</p>
+<p>Value: @Model.Value</p>
+
+<form>
+  <input type="hidden" name="delay" value="0" />
+  <input type="submit" value="Refresh" />
+</form>
+<form>
+  <input type="hidden" name="delay" value="3000" />
+  <input type="submit" value="Refresh (3s delay)" />
+</form>

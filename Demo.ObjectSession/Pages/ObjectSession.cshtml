@@ -1,0 +1,34 @@
+@page
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@attribute [RequireObjectSession]
+@using CoreForms.Web.Infrastructure.Integration
+@model Demo.ObjectSession.Pages.ObjectSessionModel
+@{
+}
+
+<h1>Object session ASP.NET Core test page</h1>
+<p>Id: @Model.Id</p>
+<p>New session: @(Model.IsNewSession ? "yes" : "no")</p>
+<p>Read only: @(Model.IsReadOnly ? "yes" : "no")</p>
+<p>Value: @Model.Value</p>
+
+<form>
+  <input type="hidden" name="delay" value="0" />
+  <input type="submit" value="Refresh" />
+</form>
+<form>
+  <input type="hidden" name="delay" value="3000" />
+  <input type="submit" value="Refresh (3s delay)" />
+</form>
+<form method="post">
+  <input type="hidden" name="delay" value="0" />
+  <input type="submit" value="Increment" />
+</form>
+<form method="post">
+  <input type="hidden" name="delay" value="3000" />
+  <input type="submit" value="Increment (3s delay)" />
+</form>
+<form method="post">
+  <input type="hidden" name="abandon" value="true" />
+  <input type="submit" value="Abandon" />
+</form>

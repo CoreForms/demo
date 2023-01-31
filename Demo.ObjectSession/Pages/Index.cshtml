@@ -1,0 +1,22 @@
+@page
+@model Demo.ObjectSession.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+}
+
+<h1>ASP.NET Core Test pages</h1>
+<p>
+  <a href="legacy/Default.aspx">Go to legacy ASP.NET</a>
+</p>
+<h2>Session test sites</h2>
+<ul>
+  <li>
+    <a asp-page="Session">ASP.NET Core Session test site</a>
+  </li>
+  <li>
+    <a asp-page="ObjectSession">Object session test site</a>
+  </li>
+  <li>
+    <a asp-page="ObjectSessionReadOnly">Object session test site (read-only)</a>
+  </li>
+</ul>
